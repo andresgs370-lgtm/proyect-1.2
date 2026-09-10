@@ -5,36 +5,36 @@
     <div class="col-md-3 mb-2 mb-md-0"><a routerLink="/" class="d-inline-flex link-body-emphasis text-decoration-none">
 
 
-      <img id="imgFast" alt="fast logo" src="fast.png">
+      <img class="animate__bounceIn" id="imgFast" alt="fast logo" src="fast.png">
       <svg class="bi" width="40" height="40" role="img" aria-label="Bootstrap">
       </svg>
       <ul class="nav col-12 col-md-auto mb-2 mb-md-0 estiloLetra">
-      <li><a class="nav-link " href="index.html/">HOME</a></li>
+      <li><a class="animate__bounceIn nav-link " href="index.html/">HOME</a></li>
       </ul>
     </a></div>
 
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-left mb-md-0 gap-5 estiloLetra">
 
-      <li><a class="nav-link "  routerLink="/video" routerLinkActive="active">Fast Video</a></li>
+      <li><a class="animate__bounceIn nav-link "  routerLink="/video" routerLinkActive="active">Fast Video</a></li>
 
-      <li><a class="nav-link" routerLink="/music" routerLinkActive="active">Fast Music</a></li>
+      <li><a class="animate__bounceIn nav-link" routerLink="/music" routerLinkActive="active">Fast Music</a></li>
 
-      <li><a class="nav-link" routerLink="/kindle" routerLinkActive="active">Kindle</a></li>
+      <li><a class="animate__bounceIn nav-link" routerLink="/kindle" routerLinkActive="active">Kindle</a></li>
 
-      <li><a class="nav-link" routerLink="/ventas" routerLinkActive="active">Tienda Online</a></li>
+      <li><a class="animate__bounceIn nav-link" routerLink="/ventas" routerLinkActive="active">Tienda Online</a></li>
 
 
-      <li><a class="nav-link" routerLink="/ia" routerLinkActivate="activate">IA</a></li>
+      <li><a class="animate__bounceIn nav-link" routerLink="/ia" routerLinkActivate="activate">IA</a></li>
     </ul>
     <div class="col-md-3 text-end">
       <ng-container *ngIf="!nombreUsuario; else logueado">
-        <button type="button" class="btn btn-outline-dark me-2" routerLink="/login" routerLinkActive="active">Login</button>
-        <button type="button" class="btn btn-dark">Sign-up</button>
+        <button type="button" class="animate__fadeInUp btn btn-outline-dark me-2" routerLink="/login" routerLinkActive="active">Login</button>
+        <button type="button" class="animate__fadeInUp btn btn-dark">Sign-up</button>
       </ng-container>
 
       <ng-template #logueado>
-        <span class="me-2">Hola, {{ nombreUsuario }}</span>
+        <span class="animate__fadeInUp me-2">Hola, {{ nombreUsuario }}</span>
       </ng-template>
     </div>
   </header>
