@@ -1,0 +1,27 @@
+.margenes {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+
+.cancion-card {
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(15, 17, 17, 0.15);
+}
+
+.portada {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.cancion-nombre {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+}
+
+.cancion-artista {
+  font-size: 0.8rem;
+  color: #555;
+}

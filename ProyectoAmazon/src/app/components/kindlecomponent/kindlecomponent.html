@@ -1,0 +1,40 @@
+<div class="fondo-2">
+  <br>
+  <br>
+  <br>
+  <div class="kindle-wrapper" *ngIf="!selectedBook">
+
+    <section class="degradado text-center container-fluid animate__animated animate__backInLeft">
+      <div class="col-lg-6 col-md-8 mx-auto"><h1 class="letrah1">FAST KINDLE</h1></div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <div class="grid animate__animated animate__backInLeft">
+      <div *ngFor="let b of books" class="book-card" (click)="openBook(b)">
+        <img
+          *ngIf="kindleservise.getBookCover(b) as cover; else placeholder"
+          [src]="cover"
+          [alt]="b.title"
+          width="180"
+          height="200"
+          class="cover-img"
+        />
+        <ng-template #placeholder>
+          <div class="cover">{{ b.title.charAt(0) }}</div>
+        </ng-template>
+
+        <p class="title">{{ b.title }}</p>
+        <p class="author">{{ b.authors[0]?.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="kindle-reader animate__animated animate__backInLeft" *ngIf="selectedBook">
+    <div class="page-nav">
+      <button (click)="closeBook()">← Biblioteca</button>
+      <span>{{ selectedBook?.title }}</span>
+    </div>
+    <pre class="page-text">{{ bookText }}</pre>
+  </div>
+</div>

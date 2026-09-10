@@ -1,0 +1,28 @@
+.degradado{
+  background: linear-gradient(180deg, #000000 30%, #00fae7 100%);
+}
+.letrah1{
+  font-family: "Arial Black", sans-serif;
+  font-size: 2000%;
+  text-shadow: 0 0 8px rgb(255 255 255);
+}
+.letra{
+  font-family: "Arial ", sans-serif;
+  color: #2c2c2c;
+  font-size: 300%;
+  text-shadow: 0 0 8px rgb(255 255 255);
+}
+.fondo{
+  background: #00fae7;
+}
+.padding{
+  padding-left: 100px;
+}
+.img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #000000;
+
+}

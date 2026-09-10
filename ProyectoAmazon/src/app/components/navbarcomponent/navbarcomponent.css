@@ -1,0 +1,23 @@
+#imgFast{
+  width: 180px;
+  height: 70px;
+}
+#nabvar{
+  justify-content: center;
+  background: white;
+}
+
+.dropdown-item{
+  font-family: "Arial";
+
+}
+.btn-invisible {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+.estiloLetra{
+  font-family: 'Arial Black';
+}

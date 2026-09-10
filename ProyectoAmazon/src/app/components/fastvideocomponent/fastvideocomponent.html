@@ -1,0 +1,53 @@
+
+<div class="fondo-2">
+  <br>
+  <div class="container-fluid margenes animate__animated animate__backInLeft">
+    <br>
+    <h3 class="pb-3 mb-4 border-bottom animate__animated animate__backInLeft">Fast Video</h3>
+
+    <div id="carruselPeliculas" class="carousel slide mb-5" data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button *ngFor="let pelicula of destacadas; let i = index"
+                type="button"
+                data-bs-target="#carruselPeliculas"
+                [attr.data-bs-slide-to]="i"
+                [class.active]="i === 0"
+                [attr.aria-current]="i === 0 ? 'true' : null">
+        </button>
+      </div>
+
+      <div class="carousel-inner rounded">
+        <div class="carousel-item" *ngFor="let pelicula of destacadas; let i = index" [class.active]="i === 0">
+          <img [src]="pelicula.portada" class="d-block w-100 carrusel-img" [alt]="pelicula.titulo">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ pelicula.titulo }}</h5>
+            <p>{{ pelicula.genero }} · {{ pelicula.anio }}</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carruselPeliculas" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carruselPeliculas" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-3" *ngFor="let pelicula of peliculas">
+        <div class="card cancion-card h-100">
+          <div class="card-body d-flex flex-column">
+            <img class="portada" [src]="pelicula.portada" [alt]="pelicula.titulo">
+            <p class="cancion-nombre flex-grow-1">{{ pelicula.titulo }}</p>
+            <p class="cancion-artista">{{ pelicula.genero }} · {{ pelicula.anio }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

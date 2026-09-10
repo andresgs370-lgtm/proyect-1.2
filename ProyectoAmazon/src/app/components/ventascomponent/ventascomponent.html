@@ -1,0 +1,30 @@
+<div class="fondo-2">
+
+  <div class="container-fluid margenes animate__animated animate__backInLeft">
+    <br>
+    <h3 class="pb-3 mb-4 border-bottom">Tienda Online</h3>
+
+    <div class="card products-strip mb-4" *ngFor="let seccion of secciones">
+      <div class="card-body">
+        <h4 class="strip-title">{{ seccion.nombre }}</h4>
+        <div class="products-row">
+
+          <div class="product-item" *ngFor="let producto of seccion.productos">
+            <div class="product-img-tienda">
+              <img class="imgProducto" [src]="producto.imagen" [alt]="producto.titulo">
+            </div>
+            <p class="product-name">{{ producto.titulo }}</p>
+            <p class="product-price">${{ producto.precio }}</p>
+            <button class="btn btn-dark btn-sm w-100" (click)="agregarAlCarrito(producto)">
+              Agregar al carrito
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <app-carritoflotantecomponent></app-carritoflotantecomponent>
+</div>

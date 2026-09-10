@@ -1,0 +1,35 @@
+<div class="fondo-2">
+  <br>
+  <br>
+  <br>
+<div class="carrito-flotante-btn" (click)="toggleCarrito()">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="carrito-badge" *ngIf="carritoService.items.length > 0">{{ carritoService.items.length }}</span>
+</div>
+
+<div class="carrito-panel" *ngIf="abierto">
+  <div class="carrito-header">
+    <h5>Mi carrito</h5>
+    <button class="btn-cerrar" (click)="toggleCarrito()">✕</button>
+  </div>
+
+  <div class="carrito-vacio" *ngIf="carritoService.items.length === 0">
+    <p>Tu carrito está vacío</p>
+  </div>
+
+  <div class="carrito-lista" *ngIf="carritoService.items.length > 0">
+    <div class="carrito-item" *ngFor="let item of carritoService.items">
+      <img [src]="item.imagen" [alt]="item.titulo">
+      <div class="carrito-item-info">
+        <p class="carrito-item-nombre">{{ item.titulo }}</p>
+        <p class="carrito-item-precio">${{ item.precio }} x {{ item.cantidad }}</p>
+      </div>
+      <button class="btn-eliminar" (click)="eliminar(item.titulo)">✕</button>
+    </div>
+  </div>
+
+  <div class="carrito-footer" *ngIf="carritoService.items.length > 0">
+    <button class="btn btn-dark w-100" (click)="vaciar()">Vaciar carrito</button>
+  </div>
+</div>
+</div>
