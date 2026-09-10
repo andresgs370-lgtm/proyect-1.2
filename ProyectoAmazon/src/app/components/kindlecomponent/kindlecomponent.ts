@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Kindleservise, Book } from '../../servise/kindleservise';
+import { Kindleservise, Book } from '../../service/kindleservise';
 
 @Component({
   selector: 'app-kindlecomponent',
